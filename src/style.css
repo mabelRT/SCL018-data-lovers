@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    cursor: url("images/Pistola2.png"), auto;
+} 
+
+/* @ encapsulan un grupo de reglas */
+@font-face {
+    font-family: Audiowide;
+    src: url(fonts/Audiowide-Regular.ttf);
+}
+
+/* Webkit para navegador google chrome y zafari */
+#titleFirstPage {
+    display: flex;
+    justify-content: center;
+    font-family: Audiowide, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #00ACB3;
+    -webkit-text-stroke: 2px black; 
+}
+
+#firstPage {
+/*    background-attachment: fixed; */
+background-image: url("images/Fondo1.jpg");
+/* position: absolute;
+overflow: hidden; 
+background-size: 100%;
+ height: 100vh; width: 100vh;*/
+background-size: cover;
+height: 100vh; width: 100vw;  
+ }
+
+ /* Agregué propiedad a los botones */
+.buttonsFirstPage {
+/*     display: block; */
+/*     display: flex;
+    flex-direction: row-reverse; */
+    border-radius: 50;
+    /* height: 30vh; width: 50vw; */
+/*     background-color: blueviolet; */
+/*   align-items: flex-end;*/
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    /*justify-content: space-between;*/
+}
+
+#secondPage {
+        display: none;
+}
