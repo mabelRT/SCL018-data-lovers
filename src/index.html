@@ -10,36 +10,43 @@
 
 <body>
     <section id="firstPage">
-    <!--REVISAR CONFIGURACIÓN PQ A MABEL LE FUNCIONA Y A MI NO-->
-    <audio autoplay="autoplay" loop=""  controls="">
-    <source src="audio/rick_and_morty_intro.mp3" type="audio/mpeg">
-    </audio> 
         <header id="titleFirstPage">
             <h1>ENCICLOPEDIA </br> WUBBA LUBBA</h1>
         </header>
         <main>
             <article>
-                <p>Conoce más sobre los personajes de Rick y Morty</p>
+                <img src="images/Nube.png" alt="Nube con un texto que dice Conoce más sobre los personajes de Rick y Morty" class="cloudImage">
+                <p class="paragraph">Conoce más sobre los </br> personajes de Rick y Morty</p>
             </article>
-            <aside class="buttonsFirstPage">
-                <button name="ingresar" type="button" title="Ir a enciclopedia" id="buttonEnter">
-                    INGRESAR
+            <aside class="containerButtonsFirstPage">
+                <button name="ingresar" type="button" title="Ir a enciclopedia" id="buttonEnter" class="btnFirstPage">
+                    <p class="btnTextFirstPage">INGRESAR</p>
                 </button>
-                <button name="trailer" type="button" title="Ver video" onclick="location.href='https://www.youtube.com/watch?v=E8cXKMR9a1Q&ab_channel=JoyasDeLaAnimación'">
-                    TRÁILER
+                <button name="trailer" type="button" title="Ver video" id="buttonTrailer" class="btnFirstPage">
+                    <a class="btnTextFirstPage" href="https://www.youtube.com/watch?v=E8cXKMR9a1Q&ab_channel=JoyasDeLaAnimaci%C3%B3n">TRÁILER</a>
                 </button>
-                <button name="sinopsis" type="button" title="Leer resumen" onclick="location.href='https://www.sensacine.com/series/serie-11561/'">
-                    SINÓPSIS & INFO
+                <button name="sinopsis" type="button" title="Leer resumen" id="buttonSynopsis" class="btnFirstPage">
+                    <a class="btnTextFirstPage" href="https://www.sensacine.com/series/serie-11561/">SINÓPSIS & INFO</a>
                 </button>
             </aside>
         </main>
+        <footer>
+            <!--REVISAR CONFIGURACIÓN PQ A MABEL LE FUNCIONA Y A MI NO-->
+            <audio autoplay="autoplay" loop="" controls="" class="audioRickAndMorty">
+                <source src="audio/rick_and_morty_intro.mp3" type="audio/mpeg">
+            </audio>
+        </footer>
     </section>
 
     <section id="secondPage">
-        <h1>ESTO TIENE QUE DESAPARECER Y APARECER</h1>
+        <header class="firstImage"></header>
+        <main class="secondImage">
+            <div id="root"></div>
+        <!-- <nav></nav>
+        <aside></aside>-->
+        </main> 
     </section>
 
-    <div id="root"></div>
     <script src="main.js" type="module"></script>
 </body>
 

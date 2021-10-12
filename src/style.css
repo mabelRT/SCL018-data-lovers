@@ -1,7 +1,7 @@
 *{
     margin: 0%;
     padding: 0%;
-    cursor: url("images/Pistola2.png"), auto;
+   /*  cursor: url("images/Pistola2.png"), auto; */
 } 
 
 /* @ encapsulan un grupo de reglas */
@@ -10,14 +10,19 @@
     src: url(fonts/Audiowide-Regular.ttf);
 }
 
+@font-face {
+    font-family: Architects Daughter;
+    src: url(fonts/ArchitectsDaughter-Regular.ttf);
+}
+
 /* Webkit para navegador google chrome y zafari */
 #titleFirstPage {
     display: flex;
     justify-content: center;
     font-family: Audiowide, Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #00ACB3;
-    -webkit-text-stroke: 2px black; 
+    -webkit-text-stroke: 0.125rem black; 
 }
 
 #firstPage {
@@ -28,26 +33,92 @@ overflow: hidden;
 background-size: 100%;
  height: 100vh; width: 100vh;*/
 background-size: cover;
-height: 100vh; width: 100vw;  
+height: 100vh; 
+width: 100vw;  
  }
 
  /* Agregué propiedad a los botones */
-.buttonsFirstPage {
+.containerButtonsFirstPage {
 /*     display: block; */
-/*     display: flex;
-    flex-direction: row-reverse; */
-    border-radius: 50;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40rem;
+    margin-top: 15rem; 
+    justify-content: space-around;
+/*     opacity: 0.5; */
     /* height: 30vh; width: 50vw; */
 /*     background-color: blueviolet; */
 /*   align-items: flex-end;*/
 }
 
-main{
-    display: flex;
-    flex-flow: row wrap;
-    /*justify-content: space-between;*/
+.btnFirstPage{
+    background-color: rgba(252, 244, 244, 0.5);
+    padding: 0.8rem;
+    border-radius: 100rem;
+    border: none;
+    margin: 1rem;
 }
+
+.btnTextFirstPage{
+    color: #00ACB3; 
+    font-size: 1.8rem;
+    font-weight: bolder;
+    font-family: Architects Daughter, Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 0.01rem black;
+}
+
+main{
+display: flex;
+/*     flex-flow: row wrap; */
+justify-content: space-around;
+height: 40vh;
+}
+
+.paragraph{
+    display: flex;
+    align-items: center;
+}
+
 
 #secondPage {
         display: none;
+}
+
+.firstImage {
+    background-image: url("images/Header2.png");
+    background-size: cover;
+    height: 30vh; width: 100vw;  
+     } 
+
+.secondImage {
+    background-image: url("images/Fondo2.png");
+    background-size: cover;
+    height: 100vh; width: 100vw;  
+     } 
+
+.cloudImage {
+    height: 35vh;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    position:absolute; z-index:1;
+ }
+ 
+.paragraph{
+    position:absolute; z-index:2; 
+    margin-top: 10rem;
+    margin-left: 13rem;
+    font-weight: bold;
+}
+
+.audioRickAndMorty{
+    margin-top: 12rem;
+}
+
+a {
+    text-decoration:none;
+}
+
+.card{
+    border: 1px solid rebeccapurple;
+    color: red;
 }
