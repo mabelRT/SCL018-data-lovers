@@ -51,6 +51,11 @@ width: 100vw;
 /*   align-items: flex-end;*/
 }
 
+/* AGREGUÉ ESTO PARA QUE SALGA UNA MANO CUANDO PASE ARRIBA DE INGRESAR */
+#buttonEnter{
+    cursor: pointer;
+}
+
 .btnFirstPage{
     background-color: rgba(252, 244, 244, 0.5);
     padding: 0.8rem;
@@ -67,33 +72,41 @@ width: 100vw;
     -webkit-text-stroke: 0.01rem black;
 }
 
-main{
+.firstPageMain{
 display: flex;
 /*     flex-flow: row wrap; */
 justify-content: space-around;
 height: 40vh;
 }
 
-.paragraph{
+.cloudParagraph{
     display: flex;
     align-items: center;
 }
 
+.cloudParagraph{
+    position:absolute; z-index:2; 
+    margin-top: 10rem;
+    margin-left: 13rem;
+    font-weight: bold;
+}
 
 #secondPage {
         display: none;
 }
 
-.firstImage {
+.firstImageSecondPage {
     background-image: url("images/Header2.png");
     background-size: cover;
-    height: 30vh; width: 100vw;  
+    height: 50vh; 
+    width: auto;  
      } 
 
-.secondImage {
+.secondImageSecondPage {
     background-image: url("images/Fondo2.png");
     background-size: cover;
-    height: 100vh; width: 100vw;  
+    height: 100%;
+    width: auto;  
      } 
 
 .cloudImage {
@@ -102,13 +115,6 @@ height: 40vh;
     margin-left: 10rem;
     position:absolute; z-index:1;
  }
- 
-.paragraph{
-    position:absolute; z-index:2; 
-    margin-top: 10rem;
-    margin-left: 13rem;
-    font-weight: bold;
-}
 
 .audioRickAndMorty{
     margin-top: 12rem;
@@ -119,6 +125,40 @@ a {
 }
 
 .card{
-    border: 1px solid rebeccapurple;
+    display: inline-block;
+    height: 50vh;
+    width: 20vw;
+    /* justify-content: space-around; */
+    background-image: url("images/Portal.jpg");
+    background-size: cover;
+    margin: 1rem;
+}
+
+.cardImage{
+    display: flex;
+    height: 25vh;
+    width: auto;
+    margin: auto; 
+    margin-top: 1rem;
+/*     justify-content: space-around; */
+}
+
+.cardText{
+    font-family: Audiowide, Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+nav{
     color: red;
+    background-color: red;
+    display: block;
+    height: 10vh;
+}
+
+.searcherImage{
+    border: 0;
+    width: 20px;
 }

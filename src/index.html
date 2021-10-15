@@ -9,15 +9,23 @@
 </head>
 
 <body>
+
+    <!--PRIMERA PÁGINA-->
     <section id="firstPage">
+    
+        <!--TÍTULO-->
         <header id="titleFirstPage">
             <h1>ENCICLOPEDIA </br> WUBBA LUBBA</h1>
         </header>
-        <main>
+
+        <!--MAIN CON ARTICLE Y ASIDE-->
+        <main class="firstPageMain">
+        <!--ARTICLE CON NUBE Y TEXTO-->
             <article>
                 <img src="images/Nube.png" alt="Nube con un texto que dice Conoce más sobre los personajes de Rick y Morty" class="cloudImage">
-                <p class="paragraph">Conoce más sobre los </br> personajes de Rick y Morty</p>
+                <p class="cloudParagraph">Conoce más sobre los </br> personajes de Rick y Morty</p>
             </article>
+        <!--ASIDE CON BOTÓN DE INGRESAR/TRÁILER/SINÓPSIS&INFO-->
             <aside class="containerButtonsFirstPage">
                 <button name="ingresar" type="button" title="Ir a enciclopedia" id="buttonEnter" class="btnFirstPage">
                     <p class="btnTextFirstPage">INGRESAR</p>
@@ -30,20 +38,47 @@
                 </button>
             </aside>
         </main>
+        <!--FOOTER CON AUDIO-->
         <footer>
-            <!--REVISAR CONFIGURACIÓN PQ A MABEL LE FUNCIONA Y A MI NO-->
             <audio autoplay="autoplay" loop="" controls="" class="audioRickAndMorty">
                 <source src="audio/rick_and_morty_intro.mp3" type="audio/mpeg">
             </audio>
         </footer>
+
     </section>
 
+    <!--SEGUNDA PÁGINA-->
     <section id="secondPage">
-        <header class="firstImage"></header>
-        <main class="secondImage">
+        <!--HEADER CON IMAGEN DE PRIMERA PÁGINA-->
+        <header class="firstImageSecondPage"></header>
+
+        <!--NAV CON VOLVER/BÚSQUEDA/SORTYBY-->
+        <nav>
+        <!--BOTÓN VOLVER-->
+            <button name="volver" type="button" title="Volver" id="buttonBack" class="btnBackToFirstPage">
+                <p class="btnTextBackToFirstPage">Volver</p>
+            </button>
+        <!--BOTÓN BÚSQUEDA-->
+            <section class="searcher">
+            <input class="searcherInput" type="search" name="buscador" placeholder="Buscador">
+            <input class="searcherImage" type="image" name="submit" src="images/Lupa.png" alt="buscar"/>
+            </section>
+        <!--BOTÓN SORTBY-->
+            <section class="sortBy">
+                <select id="sort" class="orderedBox">
+                    <option value="sort-by" selected hidden>Ordenar</option>
+                    <option value="name" id="ascendent-name">A-Z</option>
+                    <option value="nameZA">Z-A</option>
+                </select>
+            </section>
+        </nav>
+
+        <!--MAIN CON IMAGEN, CARD, ASIDE-->
+        <main class="secondImageSecondPage">
+            <!--CARDS-->
             <div id="root"></div>
-        <!-- <nav></nav>
-        <aside></aside>-->
+            <!--ASIDE CON FILTROS--> 
+        <aside></aside>
         </main> 
     </section>
 

@@ -1,15 +1,25 @@
-import { example } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
+import {sortData} from './data.js';
 
-console.log(example, data);
+console.log(sortData, data);
+
+// Averiguar porqué no es una función pura
+const sortBy = "name";
 
 // Función para aparecer y desaparecer páginas
 const firstPage = document.getElementById("firstPage");
 const secondPage = document.getElementById("secondPage");
 
+// Botón INGRESAR
 document.getElementById("buttonEnter").addEventListener("click", () => {
     firstPage.style.display = "none";
     secondPage.style.display = "block";
+});
+
+// Botón VOLVER
+document.getElementById("buttonBack").addEventListener("click", () => {
+    secondPage.style.display = "none";
+    firstPage.style.display = "block";
 });
 
 // Evento onclick para redireccionar a páginas
@@ -23,28 +33,43 @@ document.getElementById('buttonSynopsis').onclick = () => {
  */
 
 // Llamar personajes
-/* rickandmorty.forEach(function(personajes) {
-    console.log(personajes.name);
-}); */
+// <li>Episodio: ${rickandmorty.episode}</li>
 
-console.log(data);
 const rickandmorty = data.results;
-console.log(rickandmorty);
-console.log("rickandmorty", rickandmorty);
-const div = document.getElementById("root");
+const printCharacters = document.getElementById("root");
 
 const drawCard = (rickandmorty) => {
-return `<div class="card">
-<ol>
-<li>Nombre: ${rickandmorty.name}</li>
-<li>Especie: ${rickandmorty.species}</li>
-<li>Estatus: ${rickandmorty.status}</li>
-</ol>
-</div>`;
+return `
+<section class="card">
+<img src="${rickandmorty.image}" alt="imagen del personaje" class="cardImage">
+<ul>
+<p class="cardText">${rickandmorty.name}</p>
+<p class="cardText">Especie: ${rickandmorty.species}</p>
+<p class="cardText">Estatus: ${rickandmorty.status}</p>
+</ul>
+</section>`;
 };
 
-for (let i=0; i < rickandmorty.length; i++) {
-div.innerHTML += drawCard(rickandmorty[i]);
+/* for (let i=0; i < rickandmorty.length; i++) { */
+    for (let i=0; i < 20; i++) {
+printCharacters.innerHTML += drawCard(rickandmorty[i]);
 };
 
-// <li>Episodio: ${rickandmorty.episode}</li>
+
+// SortBy
+
+const orderOption = document.querySelector(".orderedBox");
+
+orderOption.addEventListener("change", (event) => {
+    const chosenOrder = sortData(data, sortBy, event.target.value);
+    const print = (results) => {
+        printCharacters.innerHTML = "";
+        for (let i=0; i < 20; i++) {
+            printCharacters.innerHTML += drawCard(rickandmorty[i]);
+            };
+    }
+    print(chosenOrder);
+});
+
+
+

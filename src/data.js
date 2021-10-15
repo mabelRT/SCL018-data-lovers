@@ -1,9 +1,18 @@
-// estas funciones son de ejemplo
+// SortBy
 
-export const example = () => {
-  return 'example';
-};
+export const sortData = (data, sortBy, sortOrder) => {
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+const rickandmorty = data.results;
+const sortedCharacters = rickandmorty.sort(function(a, b){
+    if (a[sortBy] > b[sortBy]) { 
+        return 1; 
+    }
+    if (a[sortBy] < b[sortBy]) {
+        return -1;
+    }
+});
+if (sortOrder === 'nameZA') {
+    return sortedCharacters.reverse();
+}
+return sortedCharacters;
+}
