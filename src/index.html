@@ -22,25 +22,25 @@
         <main class="firstPageMain">
         <!--ARTICLE CON NUBE Y TEXTO-->
             <article>
-                <img src="images/Nube.png" alt="Nube con un texto que dice Conoce más sobre los personajes de Rick y Morty" class="cloudImage">
-                <p class="cloudParagraph">Conoce más sobre los </br> personajes de Rick y Morty</p>
+                <!-- <img src="images/Nube.png" alt="Nube con un texto que dice Conoce más sobre los personajes de Rick y Morty" class="cloudImage"> -->
+                <p class="cloudParagraph"> <span class="firstPartCloudParagraph">Conoce más sobre los</span> <span>personajes de Rick y Morty</span> </p>
             </article>
         <!--ASIDE CON BOTÓN DE INGRESAR/TRÁILER/SINÓPSIS&INFO-->
             <aside class="containerButtonsFirstPage">
                 <button name="ingresar" type="button" title="Ir a enciclopedia" id="buttonEnter" class="btnFirstPage">
                     <p class="btnTextFirstPage">INGRESAR</p>
                 </button>
-                <button name="trailer" type="button" title="Ver video" id="buttonTrailer" class="btnFirstPage">
+                <button name="trailer" type="button" title="Ver video" class="btnFirstPage">
                     <a class="btnTextFirstPage" href="https://www.youtube.com/watch?v=E8cXKMR9a1Q&ab_channel=JoyasDeLaAnimaci%C3%B3n">TRÁILER</a>
                 </button>
-                <button name="sinopsis" type="button" title="Leer resumen" id="buttonSynopsis" class="btnFirstPage">
+                <button name="sinopsis" type="button" title="Leer resumen" class="btnFirstPage">
                     <a class="btnTextFirstPage" href="https://www.sensacine.com/series/serie-11561/">SINÓPSIS & INFO</a>
                 </button>
             </aside>
         </main>
         <!--FOOTER CON AUDIO-->
-        <footer>
-            <audio autoplay="autoplay" loop="" controls="" class="audioRickAndMorty">
+        <footer class="audioRickAndMorty">
+            <audio autoplay="autoplay" loop="" controls="">
                 <source src="audio/rick_and_morty_intro.mp3" type="audio/mpeg">
             </audio>
         </footer>
@@ -50,22 +50,23 @@
     <!--SEGUNDA PÁGINA-->
     <section id="secondPage">
         <!--HEADER CON IMAGEN DE PRIMERA PÁGINA-->
-        <header class="firstImageSecondPage"></header>
+        <header class="firstImageSecondPage">
+        </header>
 
         <!--NAV CON VOLVER/BÚSQUEDA/SORTYBY-->
         <nav>
         <!--BOTÓN VOLVER-->
-            <button name="volver" type="button" title="Volver" id="buttonBack" class="btnBackToFirstPage">
+            <button name="volver" type="button" title="Volver" id="buttonBack" class="btnBackToFirstPage btnsSecondPage">
                 <p class="btnTextBackToFirstPage">Volver</p>
             </button>
         <!--BOTÓN BÚSQUEDA-->
-            <section class="searcher">
-            <input class="searcherInput" type="search" name="buscador" placeholder="Buscador">
-            <input class="searcherImage" type="image" name="submit" src="images/Lupa.png" alt="buscar"/>
-            </section>
+ <!--       <section class="searcher">
+            <input class="searcherInput" type="search" name="buscador" placeholder="Buscador"> -->
+        <!--     <input class="searcherImage" type="image" name="submit" src="images/Lupa.png" alt="buscar"/> -->
+        <!--     </section> -->
         <!--BOTÓN SORTBY-->
             <section class="sortBy">
-                <select id="sort" class="orderedBox">
+                <select id="sort" class="orderedBox btnsSecondPage">
                     <option value="sort-by" selected hidden>Ordenar</option>
                     <option value="name" id="ascendent-name">A-Z</option>
                     <option value="nameZA">Z-A</option>

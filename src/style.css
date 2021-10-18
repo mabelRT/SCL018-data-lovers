@@ -15,43 +15,52 @@
     src: url(fonts/ArchitectsDaughter-Regular.ttf);
 }
 
+#firstPage {
+    background-image: url("images/Fondo1.jpg");
+    background-size: cover;
+    height: 100vh; 
+    width: 100vw;  
+}
+
 /* Webkit para navegador google chrome y zafari */
 #titleFirstPage {
-    display: flex;
-    justify-content: center;
     font-family: Audiowide, Arial, Helvetica, sans-serif;
     font-size: 1.875rem;
     color: #00ACB3;
     -webkit-text-stroke: 0.125rem black; 
+    display: flex;
+    justify-content: center;
 }
 
-#firstPage {
-/*    background-attachment: fixed; */
-background-image: url("images/Fondo1.jpg");
-/* position: absolute;
-overflow: hidden; 
-background-size: 100%;
- height: 100vh; width: 100vh;*/
-background-size: cover;
-height: 100vh; 
-width: 100vw;  
- }
+.firstPageMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
- /* Agregué propiedad a los botones */
+span{
+    display: block;
+}
+
+.firstPartCloudParagraph{
+    margin-left: 3rem;
+}
+
+.cloudParagraph{
+    font-family: Audiowide, Arial, Helvetica, sans-serif;
+    color: black; 
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .containerButtonsFirstPage {
-/*     display: block; */
     display: flex;
     flex-direction: column;
-    margin-left: 40rem;
-    margin-top: 15rem; 
     justify-content: space-around;
-/*     opacity: 0.5; */
-    /* height: 30vh; width: 50vw; */
-/*     background-color: blueviolet; */
-/*   align-items: flex-end;*/
+    margin-top: 5rem;
+    margin-left: 20rem;
 }
 
-/* AGREGUÉ ESTO PARA QUE SALGA UNA MANO CUANDO PASE ARRIBA DE INGRESAR */
 #buttonEnter{
     cursor: pointer;
 }
@@ -60,8 +69,11 @@ width: 100vw;
     background-color: rgba(252, 244, 244, 0.5);
     padding: 0.8rem;
     border-radius: 100rem;
-    border: none;
-    margin: 1rem;
+    margin: 1rem; 
+}
+
+a {
+    text-decoration: none;
 }
 
 .btnTextFirstPage{
@@ -72,27 +84,12 @@ width: 100vw;
     -webkit-text-stroke: 0.01rem black;
 }
 
-.firstPageMain{
-display: flex;
-/*     flex-flow: row wrap; */
-justify-content: space-around;
-height: 40vh;
-}
-
-.cloudParagraph{
-    display: flex;
-    align-items: center;
-}
-
-.cloudParagraph{
-    position:absolute; z-index:2; 
-    margin-top: 10rem;
-    margin-left: 13rem;
-    font-weight: bold;
+.audioRickAndMorty{
+margin-top: 4rem;
 }
 
 #secondPage {
-        display: none;
+    display: none;
 }
 
 .firstImageSecondPage {
@@ -100,47 +97,34 @@ height: 40vh;
     background-size: cover;
     height: 50vh; 
     width: auto;  
-     } 
+} 
+
+nav{
+    background-color: red;
+    height: 20vh;
+}
 
 .secondImageSecondPage {
     background-image: url("images/Fondo2.png");
-    background-size: cover;
-    height: 100%;
-    width: auto;  
-     } 
-
-.cloudImage {
-    height: 35vh;
-    margin-top: 5rem;
-    margin-left: 10rem;
-    position:absolute; z-index:1;
- }
-
-.audioRickAndMorty{
-    margin-top: 12rem;
-}
-
-a {
-    text-decoration:none;
+    background-size: cover; /*Repeat*/
 }
 
 .card{
     display: inline-block;
     height: 50vh;
     width: 20vw;
-    /* justify-content: space-around; */
     background-image: url("images/Portal.jpg");
     background-size: cover;
     margin: 1rem;
 }
 
 .cardImage{
-    display: flex;
     height: 25vh;
     width: auto;
-    margin: auto; 
+    margin: auto;
     margin-top: 1rem;
-/*     justify-content: space-around; */
+    display: flex;
+    justify-content: space-around;
 }
 
 .cardText{
@@ -151,14 +135,44 @@ a {
     margin-top: 1rem;
 }
 
+/*    .searcherImage{
+        border: 0;
+        width: 20px;
+    }*/
+
 nav{
-    color: red;
-    background-color: red;
-    display: block;
-    height: 10vh;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
 }
 
-.searcherImage{
-    border: 0;
-    width: 20px;
+.btnsSecondPage{
+    background-color: rgba(252, 244, 244, 0.5);
+    padding: 0.8rem;
+    border-radius: 100rem;
+    margin: 1rem; 
 }
+
+/*  .searcher{
+    height:100%;
+    padding-top:0px;
+    float:right;
+    background-color: rgba(252, 244, 244, 0.5);;
+    font-size:12.9px;
+}  */
+
+/* 
+input[type="search"]{
+    width:170px;
+    margin:10px;
+    padding:10px 16px;
+    border-radius:32px;
+    outline:none;
+    border:2px solid #ccd1d1;
+    background: rgba(252, 244, 244, 0.5);;
+    transition:all 0.5s;
+}
+input[type="search"]:focus{
+    background:#fff;
+    width:300px;
+} */
