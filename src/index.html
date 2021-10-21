@@ -79,7 +79,36 @@
             <!--CARDS-->
             <div id="root"></div>
             <!--ASIDE CON FILTROS--> 
-        <aside></aside>
+        <aside>
+            <h1>FILTROS</h1>
+                <!--filtro de especie--> 
+            <section class= "especie">
+                <select id="filterSpecies" class="filterBoxSpecies">
+                    <option value="Filter-S" selected hidden>ESPECIES</option>
+                    <option value="Human">HUMANOS</option>
+                     <option value="Humanoid">HUMANOIDES</option>
+                    <option value="Alien">ALIENS</option>
+                   <option value="Vampire">VAMPIROS</option>
+                    <option value="Mytholog">MITOLOGICOS</option>
+                    <option value="Disease">ENFERMEDADES</option>
+                    <option value="Poopybutthole">POOPYBUTTHOLES</option>
+                    <option value="Animal">ANIMALES</option>
+                    <option value="Robot">ROBOTS</option>
+                    <option value="Parasite">PARASITOS</option>
+                     <option value="unknown">ESPECIE DESCONOCIDA</option>
+                    <option value="Cronenberg">CRONENBERG</option>  
+                </select>
+            </section>
+                <!--filtro de stado-->
+            <section class= "estado">
+                <select id= "filterStatus" class="filterBoxStatus">
+                    <option value="filtes-St" selected hidden>ESTADO</option>
+                    <option value="unknown">ESTADO DESCONOCIDO</option>
+                    <option value="Dead">MUERTO</option>
+                    <option value="Alive">VIVO</option>
+                </select>
+            </section>
+        </aside>
         </main> 
     </section>
 

@@ -1,18 +1,28 @@
-import { example, anotherExample } from '../src/data.js';
+import sortData  from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+/*describe('sortData.sortedCharacters', () => {
+  test('sortData.sortedCharacters sea una funcion', () => {
+    expect(typeof sortData.sortedCharacters).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  test('Abradolf Lincler > Accountant dog debe dar Abradolf Lincler ', () => {
+    expect(sortData.sortedCharacters(Abradolf, Accountant)).toBe(Abradolf);
+  });
+});*/
+describe('sortData', () => {
+  it('is a function', () => {
+    expect(typeof sortData).toBe('function');
+  });
+
+  it('returns sortData', () => {
+    expect(sortData('Abradolf Lincler, Accountant dog')).toBe('Abradolf Lincler');
   });
 });
 
 
-describe('anotherExample', () => {
+
+/*describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
@@ -20,4 +30,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/

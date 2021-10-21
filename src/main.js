@@ -1,11 +1,13 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {sortData} from './data.js';
+import {sortData, filterDataSpecies, filterDataStatus} from './data.js';
 
-console.log(sortData, data);
 
+/*console.log(sortData, data);
+console.log(filterDataSpecies, data);
+console.log(filterDataStatus, data);*/
 // Averiguar porqué no es una función pura
-const sortBy = "name";
-
+//const sortBy = "name";
+//const condition = "species";
 // Función para aparecer y desaparecer páginas
 const firstPage = document.getElementById("firstPage");
 const secondPage = document.getElementById("secondPage");
@@ -53,7 +55,7 @@ return `
 /* for (let i=0; i < rickandmorty.length; i++) { */
     for (let i=0; i < 20; i++) {
 printCharacters.innerHTML += drawCard(rickandmorty[i]);
-};
+}
 
 
 // SortBy
@@ -61,14 +63,48 @@ printCharacters.innerHTML += drawCard(rickandmorty[i]);
 const orderOption = document.querySelector(".orderedBox");
 
 orderOption.addEventListener("change", (event) => {
-    const chosenOrder = sortData(data, sortBy, event.target.value);
-    const print = (results) => {
+    const chosenOrder = sortData(data,data.results.name, event.target.value);
+    const print = () => { 
         printCharacters.innerHTML = "";
         for (let i=0; i < 20; i++) {
-            printCharacters.innerHTML += drawCard(rickandmorty[i]);
-            };
+            printCharacters.innerHTML += drawCard(data.results[i]);
+            }
     }
     print(chosenOrder);
 });
 
+
+
+//filtro de especies
+//accseso a la clase
+const filterSpecie = document.querySelector(".filterBoxSpecies");
+//registramos el evento change
+filterSpecie.addEventListener("change", (event) => {
+    //event.target optiene el elemento donde ocurrio el evento
+   const species = filterDataSpecies(data.results, event.target.value);
+   printCharacters.innerHTML = "";  
+   
+    const filter = () => {
+       
+        for (let i=0; i < species.length; i++) {
+            printCharacters.innerHTML += drawCard(species[i]);
+            }
+    }
+    filter(species);
+});
+
+
+//filtro estado
+const filterStatus = document.querySelector(".filterBoxStatus");
+filterStatus.addEventListener("change", (event) => {
+    const status = filterDataStatus(data.results, event.target.value);
+    printCharacters.innerHTML = "";
+    const filter = () => {
+       
+        for (let i=0; i < status.length; i++) {
+            printCharacters.innerHTML += drawCard(status[i]);
+        }
+    }
+    filter(status);
+});
 
