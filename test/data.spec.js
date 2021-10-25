@@ -34,7 +34,7 @@ describe('sortData', () => {
 
   it('should order the result from Z to A', () => {
     const data = {
-      result:[ 
+      results:[ 
       {name: 'Rick Sanchez'},
       {name: 'Morty Smith'},
       {name: 'Summer Smith'},

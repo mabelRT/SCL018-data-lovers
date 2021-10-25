@@ -1,13 +1,13 @@
 // SortBy
 
-export const sortData = (data, name, sortOrder) => {
+export const sortData = (data, sortBy, sortOrder) => {
 
     const rickandmorty = data.results;
     const sortedCharacters = rickandmorty.sort((a, b) => {
-            if (a.name > b.name) {
+            if (a[sortBy] > b[sortBy]) {
                 return 1;
             }
-            if (a.name < b.name) {
+            if (a[sortBy] < b[sortBy]) {
                 return -1;
             }
         });

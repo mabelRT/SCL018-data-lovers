@@ -15,7 +15,7 @@
     
         <!--TÍTULO-->
         <header id="titleFirstPage">
-            <h1>ENCICLOPEDIA WUBBA LUBBA</h1>
+            <h1><span>ENCICLOPEDIA</span> <span>WUBBA LUBBA</span></h1>
         </header>
 
         <!--MAIN CON ARTICLE Y ASIDE-->
@@ -34,16 +34,16 @@
                     <a class="btnTextFirstPage" href="https://www.youtube.com/watch?v=E8cXKMR9a1Q&ab_channel=JoyasDeLaAnimaci%C3%B3n">TRÁILER</a>
                 </button>
                 <button name="sinopsis" type="button" title="Leer resumen" class="btnFirstPage">
-                    <a class="btnTextFirstPage" href="https://www.sensacine.com/series/serie-11561/">SINÓPSIS  INFO</a>
+                    <a class="btnTextFirstPage" href="https://www.sensacine.com/series/serie-11561/">SINÓPSIS E INFO</a>
                 </button>
             </aside>
         </main>
         <!--FOOTER CON AUDIO-->
-        <footer class="audioRickAndMorty">
+        <!-- <footer class="audioRickAndMorty">
             <audio autoplay="autoplay" loop="" controls="">
                 <source src="audio/rick_and_morty_intro.mp3" type="audio/mpeg">
             </audio>
-        </footer>
+        </footer> -->
 
     </section>
 
@@ -57,7 +57,7 @@
         <nav>
         <!--BOTÓN VOLVER-->
             <button name="volver" type="button" title="Volver" id="buttonBack" class="btnBackToFirstPage btnsSecondPage">
-                <p class="btnTextBackToFirstPage">Volver</p>
+                <p class="btnTextBackToFirstPage">VOLVER</p>
             </button>
         <!--BOTÓN BÚSQUEDA-->
  <!--       <section class="searcher">
@@ -67,7 +67,7 @@
         <!--BOTÓN SORTBY-->
             <section class="sortBy">
                 <select id="sort" class="orderedBox btnsSecondPage">
-                    <option value="sort-by" selected hidden>Ordenar</option>
+                    <option value="sort-by" selected hidden>ORDENAR</option>
                     <option value="name" id="ascendent-name">A-Z</option>
                     <option value="nameZA">Z-A</option>
                 </select>
@@ -75,16 +75,18 @@
         </nav>
 
         <!--MAIN CON IMAGEN, CARD, ASIDE-->
-        <main class="secondImageSecondPage">
+        <main class="secondImageSecondPage cardsAndFilters">
             <!--CARDS-->
             <div id="root"></div>
             <!--ASIDE CON FILTROS--> 
         <aside>
-            <h1>FILTROS</h1>
-                <!--filtro de especie--> 
-            <section class= "especie">
+        <section class="filtersAside">
+        <h1 class="filters">FILTROS</h1>
+            
+        <!--BOTÓN ESPECIE-->
+            <section class="filterBtns">
                 <select id="filterSpecies" class="filterBoxSpecies">
-                    <option value="Filter-S" selected hidden>ESPECIES</option>
+                    <option value="Filter-Sp" selected hidden>ESPECIES</option>
                     <option value="Human">HUMANOS</option>
                      <option value="Humanoid">HUMANOIDES</option>
                     <option value="Alien">ALIENS</option>
@@ -97,19 +99,22 @@
                     <option value="Parasite">PARASITOS</option>
                      <option value="unknown">ESPECIE DESCONOCIDA</option>
                     <option value="Cronenberg">CRONENBERG</option>  
-                </select>
+                  </select>
             </section>
-                <!--filtro de stado-->
-            <section class= "estado">
-                <select id= "filterStatus" class="filterBoxStatus">
-                    <option value="filtes-St" selected hidden>ESTADO</option>
-                    <option value="unknown">ESTADO DESCONOCIDO</option>
-                    <option value="Dead">MUERTO</option>
-                    <option value="Alive">VIVO</option>
-                </select>
+
+            <!--BOTÓN ESTATUS-->
+            <section class="filterBtns">
+                <select id="filterStatus" class="filterBoxStatus">
+                    <option value="Filter-St" selected hidden>ESTATUS</option>
+                    <option value="unknown">Desconocido</option>
+                     <option value="Dead">Muerto</option> 
+                     <option value="Alive">Vivo</option>
+                  </select>
             </section>
-              <!--BOTÓN LIMPIAR-->
-              <button type="button" id="buttonClean" class="btnclean">LIMPIAR</button>
+
+<!--             BOTÓN LIMPIAR
+            <button>LIMPIAR</button> -->
+        </section>
         </aside>
         </main> 
     </section>
