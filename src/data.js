@@ -3,14 +3,14 @@
 export const sortData = (data, name, sortOrder) => {
 
     const rickandmorty = data.results;
-    const sortedCharacters = rickandmorty.sort(function(a, b){
-        if (a.name > b.name) { 
-            return 1; 
-        }
-        if (a.name < b.name) {
-            return -1;
-        }
-    });
+    const sortedCharacters = rickandmorty.sort((a, b) => {
+            if (a.name > b.name) {
+                return 1;
+            }
+            if (a.name < b.name) {
+                return -1;
+            }
+        });
     if (sortOrder === 'nameZA') {
         return sortedCharacters.reverse();
     }

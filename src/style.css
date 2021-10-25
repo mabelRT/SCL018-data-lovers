@@ -114,8 +114,10 @@ nav{
     height: 50vh;
     width: 20vw;
     background-image: url("images/Portal.jpg");
+    background-position: center;
     background-size: cover;
     margin: 1rem;
+  
 }
 
 .cardImage{
@@ -125,6 +127,7 @@ nav{
     margin-top: 1rem;
     display: flex;
     justify-content: space-around;
+    
 }
 
 .cardText{

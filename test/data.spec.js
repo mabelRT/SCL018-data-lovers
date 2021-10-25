@@ -1,33 +1,88 @@
-import sortData  from '../src/data.js';
 
+import {sortData, filterDataSpecies, filterDataStatus} from '../src/data.js';
 
-/*describe('sortData.sortedCharacters', () => {
-  test('sortData.sortedCharacters sea una funcion', () => {
-    expect(typeof sortData.sortedCharacters).toBe('function');
-  });
-
-  test('Abradolf Lincler > Accountant dog debe dar Abradolf Lincler ', () => {
-    expect(sortData.sortedCharacters(Abradolf, Accountant)).toBe(Abradolf);
-  });
-});*/
 describe('sortData', () => {
   it('is a function', () => {
     expect(typeof sortData).toBe('function');
   });
 
-  it('returns sortData', () => {
-    expect(sortData('Abradolf Lincler, Accountant dog')).toBe('Abradolf Lincler');
+  it('should order the result from A to Z', () => {
+    const data = {
+      results:[
+        {name: 'Rick Sanchez'},
+        {name: 'Morty Smith'},
+        {name: 'Summer Smith'},
+        {name: 'Beth Smith'},
+        {name: 'Jerry Smith'},
+      ]
+    };
+    const result = [
+      {name: 'Beth Smith'},
+      {name: 'Jerry Smith'},
+      {name: 'Morty Smith'},
+      {name: 'Rick Sanchez'},
+      {name: 'Summer Smith'},
+    ];
+    expect(sortData(data,'name')).toEqual(result);
   });
 });
 
-
-
-/*describe('anotherExample', () => {
+describe('sortData', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof sortData).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('should order the result from Z to A', () => {
+    const data = {
+      result:[ 
+      {name: 'Rick Sanchez'},
+      {name: 'Morty Smith'},
+      {name: 'Summer Smith'},
+      {name: 'Beth Smith'},
+      {name: 'Jerry Smith'},
+     ]
+    };
+    const result = [
+      {name: 'Summer Smith'},
+      {name: 'Rick Sanchez'},
+      {name: 'Morty Smith'},
+      {name: 'Jerry Smith'}, 
+      {name: 'Beth Smith'},  
+    ];
+    expect(sortData(data,'name', 'nameZA')).toEqual(result);
   });
-});*/
+});
+
+describe('filterDataSpecies', () => {
+  it('is a function', () => {
+    expect(typeof filterDataSpecies).toBe('function');
+  });
+
+  it('should return the result to species `Human`', () => {
+    const data =[
+      {species: 'Alien'},
+      {species: 'Human'},
+      {species: 'Humanoid'},
+      {species: 'Vampire'},
+      {species: 'Mytholog'}
+    ]
+    const result = [{species: 'Human'}]
+    expect(filterDataSpecies(data, 'Human')).toEqual(result);
+  });
+});
+
+describe('filterDataStatus', () => {
+  it('is a function', () => {
+    expect(typeof filterDataStatus).toBe('function');
+  });
+
+  it('should return the result to status `Alive`', () => {
+    const data =[
+      {status: 'Dead'},
+      {status: 'Alive'},
+      {status: 'unknown'}
+    ]
+    const result = [{status: 'Alive'}]
+    expect(filterDataStatus(data, 'Alive')).toEqual(result);
+  });
+});

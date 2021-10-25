@@ -1,13 +1,6 @@
 import data from './data/rickandmorty/rickandmorty.js';
 import {sortData, filterDataSpecies, filterDataStatus} from './data.js';
 
-
-/*console.log(sortData, data);
-console.log(filterDataSpecies, data);
-console.log(filterDataStatus, data);*/
-// Averiguar porqué no es una función pura
-//const sortBy = "name";
-//const condition = "species";
 // Función para aparecer y desaparecer páginas
 const firstPage = document.getElementById("firstPage");
 const secondPage = document.getElementById("secondPage");
@@ -23,16 +16,6 @@ document.getElementById("buttonBack").addEventListener("click", () => {
     secondPage.style.display = "none";
     firstPage.style.display = "block";
 });
-
-// Evento onclick para redireccionar a páginas
-/* document.getElementById('buttonTrailer').onclick = () => {
-    location.href = "https://www.youtube.com/watch?v=E8cXKMR9a1Q&ab_channel=JoyasDeLaAnimaci%C3%B3n"
-    }
-
-document.getElementById('buttonSynopsis').onclick = () => {
-    location.href = "https://www.sensacine.com/series/serie-11561/"
-    }
- */
 
 // Llamar personajes
 // <li>Episodio: ${rickandmorty.episode}</li>
@@ -53,9 +36,10 @@ return `
 };
 
 /* for (let i=0; i < rickandmorty.length; i++) { */
-    for (let i=0; i < 20; i++) {
+    for (let i=0; i < rickandmorty.length; i++) {
 printCharacters.innerHTML += drawCard(rickandmorty[i]);
 }
+
 
 
 // SortBy
@@ -66,7 +50,7 @@ orderOption.addEventListener("change", (event) => {
     const chosenOrder = sortData(data,data.results.name, event.target.value);
     const print = () => { 
         printCharacters.innerHTML = "";
-        for (let i=0; i < 20; i++) {
+        for (let i=0; i < data.results.length; i++) {
             printCharacters.innerHTML += drawCard(data.results[i]);
             }
     }
@@ -108,3 +92,20 @@ filterStatus.addEventListener("change", (event) => {
     filter(status);
 });
 
+//boton limpiar funcional(no limpia los selct)
+const buttonCleanReset = document.getElementById("buttonClean");
+
+buttonCleanReset.addEventListener("click", () => {
+    printCharacters.innerHTML = "";
+    function clean() {
+
+        for (let i = 0; i < data.results.length; i++) {
+            printCharacters.innerHTML += drawCard(data.results[i]);
+        }
+    }
+    clean(data.results);
+
+});
+buttonCleanReset.addEventListener("click", () =>{
+    
+})
