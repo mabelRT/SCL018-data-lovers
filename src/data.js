@@ -17,18 +17,6 @@ export const sortData = (data, sortBy, sortOrder) => {
     return sortedCharacters;
     }
 
-/*export const filterData = (data, species) => {
-    const rickandmorty =data.results;
-    const items = orders.filter(item => item.species)
-}*/
-///export const filterData = (data,condition) => {
-   //const dataFilter = data.results;
-  // const especie   = dataFilter.filter(especie => especie.specie === condition)
-//};
-  
-  //const especies   = dataFilter.filter(especie => { 
-     // return especie.species === condition;
-    //})
 
 //filtrar especie
 export const filterDataSpecies = (results, species) => {
