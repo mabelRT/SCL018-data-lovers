@@ -16,7 +16,7 @@ document.getElementById("buttonEnter").addEventListener("click", () => {
 
 // Botón VOLVER
 document.getElementById("buttonBack").addEventListener("click", () => {
-    secondPage.style.display = "none";
+     secondPage.style.display = "none";
     firstPage.style.display = "block";
 });
 
